@@ -29,10 +29,10 @@ seu saldo atual.
 operador define o critério de ordenação (por nome, por saldo crescente, por saldo
 decrescente, por idade crescente, por idade decrescente).
 
-Várias classes devem ser implementadas, e estas classes juntas, umas usando as outras, vão
+  Várias classes devem ser implementadas, e estas classes juntas, umas usando as outras, vão
 compor as funcionalidades descritas. Tais classes vão ser organizadas em camadas (assunto a
 ser visto logo em breve) e vão ter funções específicas.
 
-A ideia é ter as duas funcionalidades prontas até o fim da 1a unidade, e as demais até o fim da
+  A ideia é ter as duas funcionalidades prontas até o fim da 1a unidade, e as demais até o fim da
 2a unidade. À medida que os assuntos forem sendo abordados, o sistema vai sendo
 incrementado com as partes e as funcionalidades pertinentes.
