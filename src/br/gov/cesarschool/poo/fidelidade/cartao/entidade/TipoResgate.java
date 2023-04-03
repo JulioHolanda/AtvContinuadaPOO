@@ -1,4 +1,4 @@
-package br.gov.cesarschool.poo.fidelidade.cartao.negocio;
+package br.gov.cesarschool.poo.fidelidade.cartao.entidade;
 
 public enum TipoResgate {
     PRODUTO(1, "produto"),

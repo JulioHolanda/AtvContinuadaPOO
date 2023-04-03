@@ -1,7 +1,8 @@
-package br.gov.cesarschool.poo.fidelidade.cliente.negocio;
+package br.gov.cesarschool.poo.fidelidade.cliente.entidade;
 import java.util.Date;
-import br.gov.cesarschool.poo.fidelidade.geral.negocio.Endereco;
-import br.gov.cesarschool.poo.fidelidade.geral.negocio.Sexo;
+
+import br.gov.cesarschool.poo.fidelidade.geral.entidade.Endereco;
+import br.gov.cesarschool.poo.fidelidade.geral.entidade.Sexo;
 
 public class Cliente {
     private String cpf;
