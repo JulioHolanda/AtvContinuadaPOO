@@ -78,7 +78,7 @@ public class ClienteMediator {
     	        return "Endereço Invalido";
     	    }
 
-    	    if (StringUtils.ENuloOuBranco(end.getLogradouro()) || end.getLogradouro().length < 4) {
+    	    if (StringUtils.ehNuloOuBranco(end.getLogradouro()) || end.getLogradouro().length < 4) {
     	        return "Endereço Logradouro Invalido"; 
     	    }
 
@@ -86,15 +86,15 @@ public class ClienteMediator {
     	        return "Endereço Numero Invalido";
     	    }
 
-    	    if (StringUtils.ENuloOuBranco(end.getCidade())) {
+    	    if (StringUtils.ehuloOuBranco(end.getCidade())) {
     	        return "Endereço Cidade Invalido"; 
     	    }
     	    
-    	    if (StringUtils.ENuloOuBranco(end.getEstado())) {
+    	    if (StringUtils.ehNuloOuBranco(end.getEstado())) {
     	        return "Endereço Estado Invalido"; 
     	    }
 
-    	    if (StringUtils.ENuloOuBranco(end.getPais())) {
+    	    if (StringUtils.ehuloOuBranco(end.getPais())) {
     	        return "Endereço Pais Invalido"; 
     	    }
 
