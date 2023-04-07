@@ -5,6 +5,9 @@ import br.gov.cesarschool.poo.fidelidade.cliente.dao.ClienteDAO;
 import br.gov.cesarschool.poo.fidelidade.cliente.entidade.Cliente;
 import br.gov.cesarschool.poo.fidelidade.cliente.entidade.ResultadoInclusaoCliente;
 import br.gov.cesarschool.poo.fidelidade.geral.entidade.Sexo;
+import br.gov.cesarschool.poo.fidelidade.util.ValidadorCPF;
+import br.gov.cesarschool.poo.fidelidade.util.StringUtil;
+import br.gov.cesarschool.poo.fidelidade.geral.entidade.Endereco;
 
 public class ClienteMediator {
 
@@ -45,60 +48,54 @@ public class ClienteMediator {
         }
     }
 
-    private String validar(Cliente cliente) {
-    	String cpf = ValidadorCPF.validar(cliente.getCpf();
-    	if (cpf!= null) {
-    		return cpf;
-    	}
- 
     	
-    	private String validar(Cliente cliente) {
-    	    if (ValidadorCPF.validar(cliente.getCpf()) != null) {
-    	        return "CPF Invalido";
-    	    }
+	private String validar(Cliente cliente) {
+	    if (ValidadorCPF.isCpfValido(cliente.getCpf()) == false) {
+	        return "CPF Invalido";
+	    }
 
-    	    if (StringUtils.ENuloOuBranco(cliente.getNome()) != null) {
-    	        return "Nome Invalido";
-    	    }
+	    if (StringUtil.ehNuloOuBranco(cliente.getNomeCompleto())) {
+	        return "Nome Invalido";
+	    }
 
-    	    if (cliente.getSexo() == null) {
-    	        return "Sexo Invalido";
-    	    }
+	    if (cliente.getSexo() == null) {
+	        return "Sexo Invalido";
+	    }
 
-    	    if (cliente.obterIdade() < 18) {
-    	        return "Cliente com idade menor a 18 anos";
-    	    }
+	    if (cliente.obterIdade() < 18) {
+	        return "Cliente com idade menor a 18 anos";
+	    }
 
-    	    if (cliente.getRenda() < 0) {
-    	        return "Renda Invalida";
-    	    }
+	    if (cliente.getRenda() < 0) {
+	        return "Renda Invalida";
+	    }
 
-    	    Endereco end = cliente.getEndereco();
-    	    if (end == null) {
-    	        return "Endereço Invalido";
-    	    }
+	    Endereco end = cliente.getEndereco();
+	    if (end == null) {
+	        return "Endereço Invalido";
+	    }
 
-    	    if (StringUtils.ehNuloOuBranco(end.getLogradouro()) || end.getLogradouro().length < 4) {
-    	        return "Endereço Logradouro Invalido"; 
-    	    }
+	    if (StringUtil.ehNuloOuBranco(end.getLogradouro()) || end.getLogradouro().length < 4) {
+	        return "Endereço Logradouro Invalido"; 
+	    }
 
-    	    if (end.getNumero() < 0) {
-    	        return "Endereço Numero Invalido";
-    	    }
+	    if (end.getNumero() < 0) {
+	        return "Endereço Numero Invalido";
+	    }
 
-    	    if (StringUtils.ehuloOuBranco(end.getCidade())) {
-    	        return "Endereço Cidade Invalido"; 
-    	    }
-    	    
-    	    if (StringUtils.ehNuloOuBranco(end.getEstado())) {
-    	        return "Endereço Estado Invalido"; 
-    	    }
+	    if (StringUtil.ehNuloOuBranco(end.getCidade())) {
+	        return "Endereço Cidade Invalido"; 
+	    }
+	    
+	    if (StringUtil.ehNuloOuBranco(end.getEstado())) {
+	        return "Endereço Estado Invalido"; 
+	    }
 
-    	    if (StringUtils.ehuloOuBranco(end.getPais())) {
-    	        return "Endereço Pais Invalido"; 
-    	    }
+	    if (StringUtil.ehNuloOuBranco(end.getPais())) {
+	        return "Endereço Pais Invalido"; 
+	    }
 
-    	    return null;
-    	}
+	    return null;
+
     }
 }
