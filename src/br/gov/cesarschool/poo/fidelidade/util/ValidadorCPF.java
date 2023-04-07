@@ -5,7 +5,7 @@ public class ValidadorCPF {
 		
 	}
 
-	public  static boolean isCpfValido(String cpf){
+	public  static boolean ehCpfValido(String cpf){
 		
 		if (cpf == null || cpf.length() != 11 || cpf == "") {
     	return false;

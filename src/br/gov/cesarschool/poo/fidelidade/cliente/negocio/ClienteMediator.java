@@ -50,7 +50,7 @@ public class ClienteMediator {
 
     	
 	private String validar(Cliente cliente) {
-	    if (ValidadorCPF.isCpfValido(cliente.getCpf()) == false) {
+	    if (ValidadorCPF.ehCpfValido(cliente.getCpf()) == false) {
 	        return "CPF Invalido";
 	    }
 
