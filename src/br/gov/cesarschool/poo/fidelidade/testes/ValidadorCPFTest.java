@@ -1,8 +1,10 @@
-package br.gov.cesarschool.poo.fidelidade.util;
+package br.gov.cesarschool.poo.fidelidade.testes;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
+
+import br.gov.cesarschool.poo.fidelidade.util.ValidadorCPF;
 
 public class ValidadorCPFTest {
 
