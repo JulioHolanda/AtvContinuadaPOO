@@ -75,7 +75,7 @@ public class ClienteMediator {
 	        return "Endereço Invalido";
 	    }
 
-	    if (StringUtil.ehNuloOuBranco(end.getLogradouro()) || end.getLogradouro().length < 4) {
+	    if (StringUtil.ehNuloOuBranco(end.getLogradouro()) || end.getLogradouro().length() < 4) {
 	        return "Endereço Logradouro Invalido"; 
 	    }
 
