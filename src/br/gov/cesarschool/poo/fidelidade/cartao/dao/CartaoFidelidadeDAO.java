@@ -11,7 +11,7 @@ import br.gov.cesarschool.poo.fidelidade.cartao.entidade.CartaoFidelidade;
 public class CartaoFidelidadeDAO {
 	
 	private static final String FILE_SEP = System.getProperty("file.separator");
-	private static final String DIR_BASE = "." + FILE_SEP + "banco" + FILE_SEP + "cartaoFidelidade" + FILE_SEP; 
+	private static final String DIR_BASE = "." + FILE_SEP + "fidelidade" + FILE_SEP + "cartao" + FILE_SEP; 
 	private static final String EXT = ".dat";
 	
 	public CartaoFidelidadeDAO() {
