@@ -1,9 +1,9 @@
 package br.gov.cesarschool.poo.fidelidade.cliente.negocio;
 
+import br.gov.cesarschool.poo.fidelidade.cartao.negocio.CartaoFidelidadeMediator;
 import br.gov.cesarschool.poo.fidelidade.cliente.dao.ClienteDAO;
 
 import br.gov.cesarschool.poo.fidelidade.cliente.entidade.Cliente;
-import br.gov.cesarschool.poo.fidelidade.geral.entidade.Sexo;
 import br.gov.cesarschool.poo.fidelidade.util.ValidadorCPF;
 import br.gov.cesarschool.poo.fidelidade.util.StringUtil;
 import br.gov.cesarschool.poo.fidelidade.geral.entidade.Endereco;
@@ -30,7 +30,7 @@ public class ClienteMediator {
         String validacao = validar(cliente);
         if (validacao == null) {
             repositorioCliente.incluir(cliente);
-            int numeroCartaoFidelidade = cartaoMediator.gerarCartaoFidelidade(cliente);
+            long numeroCartaoFidelidade = cartaoMediator.gerarCartao(cliente);
             return new ResultadoInclusaoCliente(numeroCartaoFidelidade, null);
         } else {
             return new ResultadoInclusaoCliente(0, validacao);
