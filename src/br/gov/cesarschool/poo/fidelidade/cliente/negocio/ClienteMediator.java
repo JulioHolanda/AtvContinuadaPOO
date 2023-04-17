@@ -3,7 +3,6 @@ package br.gov.cesarschool.poo.fidelidade.cliente.negocio;
 import br.gov.cesarschool.poo.fidelidade.cliente.dao.ClienteDAO;
 
 import br.gov.cesarschool.poo.fidelidade.cliente.entidade.Cliente;
-import br.gov.cesarschool.poo.fidelidade.cliente.entidade.ResultadoInclusaoCliente;
 import br.gov.cesarschool.poo.fidelidade.geral.entidade.Sexo;
 import br.gov.cesarschool.poo.fidelidade.util.ValidadorCPF;
 import br.gov.cesarschool.poo.fidelidade.util.StringUtil;
